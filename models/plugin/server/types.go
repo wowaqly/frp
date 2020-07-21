@@ -38,9 +38,27 @@ type LoginContent struct {
 type UserInfo struct {
 	User  string            `json:"user"`
 	Metas map[string]string `json:"metas"`
+	RunId string            `json:"run_id"`
 }
 
 type NewProxyContent struct {
 	User UserInfo `json:"user"`
 	msg.NewProxy
+}
+
+type PingContent struct {
+	User UserInfo `json:"user"`
+	msg.Ping
+}
+
+type NewWorkConnContent struct {
+	User UserInfo `json:"user"`
+	msg.NewWorkConn
+}
+
+type NewUserConnContent struct {
+	User       UserInfo `json:"user"`
+	ProxyName  string   `json:"proxy_name"`
+	ProxyType  string   `json:"proxy_type"`
+	RemoteAddr string   `json:"remote_addr"`
 }

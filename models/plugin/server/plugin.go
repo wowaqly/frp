@@ -21,8 +21,11 @@ import (
 const (
 	APIVersion = "0.1.0"
 
-	OpLogin    = "Login"
-	OpNewProxy = "NewProxy"
+	OpLogin       = "Login"
+	OpNewProxy    = "NewProxy"
+	OpPing        = "Ping"
+	OpNewWorkConn = "NewWorkConn"
+	OpNewUserConn = "NewUserConn"
 )
 
 type Plugin interface {
